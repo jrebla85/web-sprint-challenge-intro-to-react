@@ -42,11 +42,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header"> Noteable Star Wars Characters</h1>
       {character.map((ch, index) => {
-        return (
-          <div key={index}>
-            {ch.name}
-          </div>
-        )
+        return <Person key={index} info={ch}/>
       })}
       {
         currentCharId && <Character charId={currentCharId} close={closeDetails} />
